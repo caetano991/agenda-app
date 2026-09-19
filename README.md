@@ -52,69 +52,6 @@ Fetch API
 
 O projeto utiliza uma arquitetura baseada em API REST, onde o JavaScript do navegador se comunica com o back-end através de requisições HTTP.
 
-┌──────────────────────────────┐
-│          Front-end           │
-│                              │
-│     HTML + CSS + JavaScript  │
-└──────────────┬───────────────┘
-               │
-               │ HTTP / JSON
-               ▼
-┌──────────────────────────────┐
-│          Spring Boot         │
-│                              │
-│      TarefaController        │
-└──────────────┬───────────────┘
-               │
-               ▼
-┌──────────────────────────────┐
-│       Spring Data JPA        │
-│                              │
-│       TarefaRepository       │
-└──────────────┬───────────────┘
-               │
-               ▼
-┌──────────────────────────────┐
-│         H2 Database          │
-│                              │
-│           tarefas            │
-└──────────────────────────────┘
-📂 Estrutura do projeto
-agenda-app/
-│
-├── src/
-│   └── main/
-│       ├── java/
-│       │   └── com/
-│       │       └── agenda/
-│       │           └── app/
-│       │               ├── AgendaApplication.java
-│       │               │
-│       │               ├── controller/
-│       │               │   └── TarefaController.java
-│       │               │
-│       │               ├── model/
-│       │               │   ├── Tarefa.java
-│       │               │   ├── Prioridade.java
-│       │               │   └── Status.java
-│       │               │
-│       │               └── repository/
-│       │                   └── TarefaRepository.java
-│       │
-│       └── resources/
-│           ├── application.properties
-│           │
-│           └── static/
-│               ├── index.html
-│               │
-│               ├── css/
-│               │   └── style.css
-│               │
-│               └── js/
-│                   └── app.js
-│
-├── pom.xml
-└── README.md
 📋 Modelo de tarefa
 
 Cada tarefa possui os seguintes campos:
